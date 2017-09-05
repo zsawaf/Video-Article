@@ -6,7 +6,8 @@
     "url": ""
   },
   "scripts": {
-    "start": "npm install"
+    "start": "npm install",
+    "postinstall": "gulp"
   },
   "dependencies": {
     "browserify": "^14.3.0",
