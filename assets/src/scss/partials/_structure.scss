@@ -1,0 +1,82 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,900');
+
+$main_font: 'Open Sans Condensed', sans-serif;
+$red: #e74c3c;
+$black: #34495e;
+$white: #fff;
+$yellow: #f1c40f;
+$grey: #ecf0f1;
+$green: #2ecc71;
+$blue: #0074c7;
+$dark_blue: #333;
+
+img, video {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $main_font;
+	font-size: 14px;
+	color: $dark_blue;
+}
+
+ul, h1, h2, h3, h4, h5, p, a {
+	margin: 0;
+	color: $dark_blue;
+}
+
+h1 {
+	font-size: 2.667em;
+}
+h2 {
+	font-size: 2.333em;
+}
+h3 {
+	font-size: 1.333em;}
+h4 {
+	font-size: 1.333em;
+	font-weight: 300;
+}
+a {
+	font-size: 1.111em;
+	text-decoration: none;
+
+	transition: all 0.3s;
+	&.button {
+		padding: 3px 10px 4px;
+		border: 1px solid white;
+		border-width: 1px;
+		border-radius: 5px;
+		background: $blue;
+		font-weight: 300;
+		text-transform: uppercase;
+
+		color: white;
+		&:hover {
+			background: white;
+			color: $blue;
+			border-color: $blue;
+		}
+	}
+}
+
+p {
+	font-size: 1em;
+	font-weight: 300;
+}
+
+.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}
+
+@media(max-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+
+	h1, h2 {
+		line-height: 1.1;
+	}
+}

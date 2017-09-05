@@ -1,0 +1,42 @@
+.app {
+
+	&__navigation {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.5);
+		
+		.container {
+			height: 50px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+	}
+
+	&__header {
+		z-index: 100;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 10px;		
+	}
+
+	&__loader {
+		position: relative;
+	}
+}
+
+.progress {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 4px;
+	background: $blue;
+	transform: translateY(-50%);
+	width: 0;
+	transition: width 0.3s;
+}
