@@ -6,6 +6,7 @@
     "url": ""
   },
   "scripts": {
+    "start": "http-server -g"
   },
   "engines": {
     "node": "7.3.0"
