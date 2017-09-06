@@ -42,12 +42,17 @@ class ArticleBlock {
 	addVideoBlock(block, idx) {
 		let src = block.Properties.mp4_url;
 		let videoBlock = `<div class="page__block block block--video"><video class="video--${idx}" src="http://${src}" class="video--${idx}"></video></div>`;
+		$(`.page--${idx}`).addClass('page--video');
 
 		$(window).on('scroll', () => {
-			let inView = this.isScrolledIntoView($(`.video--${idx}`));
-			console.log($(`.video--${idx}`));
-			if (inView) {
-				$(`.video--${idx}`)[0].play();
+			if ($('.page--active').hasClass('page--video')) {
+				let inView = this.isScrolledIntoView($(`.video--${idx}`));
+				if (inView) {
+					$(`.video--${idx}`)[0].play();
+				}
+				else {
+					$(`.video--${idx}`)[0].pause();
+				}
 			}
 			else {
 				$(`.video--${idx}`)[0].pause();

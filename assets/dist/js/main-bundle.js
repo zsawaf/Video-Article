@@ -127,12 +127,16 @@ var ArticleBlock = function () {
 
 			var src = block.Properties.mp4_url;
 			var videoBlock = "<div class=\"page__block block block--video\"><video class=\"video--" + idx + "\" src=\"http://" + src + "\" class=\"video--" + idx + "\"></video></div>";
+			(0, _jquery2.default)(".page--" + idx).addClass('page--video');
 
 			(0, _jquery2.default)(window).on('scroll', function () {
-				var inView = _this.isScrolledIntoView((0, _jquery2.default)(".video--" + idx));
-				console.log((0, _jquery2.default)(".video--" + idx));
-				if (inView) {
-					(0, _jquery2.default)(".video--" + idx)[0].play();
+				if ((0, _jquery2.default)('.page--active').hasClass('page--video')) {
+					var inView = _this.isScrolledIntoView((0, _jquery2.default)(".video--" + idx));
+					if (inView) {
+						(0, _jquery2.default)(".video--" + idx)[0].play();
+					} else {
+						(0, _jquery2.default)(".video--" + idx)[0].pause();
+					}
 				} else {
 					(0, _jquery2.default)(".video--" + idx)[0].pause();
 				}
